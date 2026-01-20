@@ -171,3 +171,25 @@ button:hover {
 .hidden {
   display: none;
 }
+
+.error-message {
+  color: hsl(4, 100%, 67%);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+
+input.error {
+  border-color: hsl(4, 100%, 67%);
+}
+
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
