@@ -192,6 +192,8 @@ button:hover {
 
 input.error {
   border-color: hsl(4, 100%, 67%);
+  
+
 }
 
 .attribution {
