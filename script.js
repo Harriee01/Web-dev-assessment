@@ -40,5 +40,32 @@ document.addEventListener('DOMContentLoaded', function() {
     successSection.classList.remove('hidden');// Show the success section by removing 'hidden' class
   });
 
+  //Success message dismissal handler
+
+  dismissButton.addEventListener('click', function() {
+    successSection.classList.add('hidden');  //  Hide the success section
+    formSection.classList.remove('hidden');  // Show the form section again
+    form.reset();  // Reset the form to clear the email input
+    clearError();  //  Clear any previous error messages/styles
+  });
+
+  //Helper functions
+  function showError(message) {
+    errorMessage.textContent = message;  // Display the error message text
+    emailInput.classList.add('error');
+  }
+
+  function clearError() {
+    errorMessage.textContent = ''; // Clear the error message text
+    emailInput.classList.remove('error');// Remove 'error' CSS class from input field
+  }
+
+
+  // Validates email format using regular expression
+  function isValidEmail(email) {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+    return regex.test(email);
+  }
+
   
 });
