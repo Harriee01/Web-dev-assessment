@@ -36,6 +36,22 @@
           <button type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
+              <!-- Right column: Illustration (different images for desktop and mobile) -->
+        <div class="illustration">
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Sign up illustration" class="desktop-illustration">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign up illustration" class="mobile-illustration">
+      </div>
+    </section>
+       <!-- Section 2: Success Message Section -->
+    <!-- This section replaces the form section after successful submission -->
+    <section class="success-section hidden">
+      <div class="success-content">
+        <img src="./assets/images/icon-success.svg" alt="Success icon">
+        <h1>Thanks for subscribing!</h1>
+        <p>A confirmation email has been sent to <span id="user-email"></span>. Please open it and click the button inside to confirm your subscription.</p><!-- The span with id="user-email" will be populated with the user's email via JavaScript -->
+        <button id="dismiss">Dismiss message</button> <!-- Button to dismiss the success message and return to form -->
+      </div>
+    </section>
 
     
   </section>
