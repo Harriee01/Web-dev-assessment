@@ -132,3 +132,42 @@ button {
 button:hover {
   background-color: hsl(4, 100%, 67%);
 }
+
+.success-section {
+  padding: 40px;
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-content img {
+  margin-bottom: 20px;
+}
+
+.success-section h1 {
+  margin-bottom: 20px;
+}
+
+.success-section p {
+  margin-bottom: 30px;
+  color: hsl(235, 18%, 26%);
+}
+
+#user-email {
+  font-weight: 700;
+}
+
+.success-section button {
+  background-color: hsl(4, 100%, 67%);
+}
+
+.success-section button:hover {
+  background-color: hsl(4, 100%, 67%);
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
