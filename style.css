@@ -193,3 +193,47 @@ input.error {
 .attribution a {
   color: hsl(0, 0%, 100%);
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container{
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .form-section {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .illustration {
+    order: -1;
+    background-color: hsl(234, 29%, 20%);
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .desktop-illustration {
+    display: none;
+  }
+
+  .mobile-illustration {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .content {
+    padding: 20px;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .success-section {
+    padding: 20px;
+  }
+}
