@@ -160,8 +160,20 @@ button:hover {
 }
 
 .success-section button {
-  background-color: hsl(4, 100%, 67%);
+  /* background-color: hsl(4, 100%, 67%); */
+   width: 100%;
+  padding: 15px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
+  
+
 
 .success-section button:hover {
   background-color: hsl(4, 100%, 67%);
