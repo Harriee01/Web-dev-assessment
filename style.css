@@ -59,3 +59,45 @@ body {
 .mobile-illustration {
   display: none;
 }
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: hsl(234, 29%, 20%);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: hsl(234, 29%, 20%);
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: hsl(234, 29%, 20%);
+}
+
+li img {
+  margin-right: 15px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: hsl(234, 29%, 20%);
+}
