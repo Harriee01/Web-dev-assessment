@@ -41,7 +41,7 @@ body {
 
 .illustration {
   flex: 1;
-  background-color: hsl(234, 29%, 20%);
+  /* background-color: hsl(234, 29%, 20%); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,20 +198,25 @@ input.error {
 @media (max-width: 768px) {
   .container{
     padding: 0;
-    border-radius: 0;
+    border-radius: 20px;
   }
 
   .form-section {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 0;
+    min-height: auto;
   }
 
   .illustration {
     order: -1;
-    background-color: hsl(234, 29%, 20%);
-    border-radius: 0 0 15px 15px;
+    /* background-color: hsl(234, 29%, 20%); */
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 50%, #ff69b4 100%);
+    border-radius: 0 0 20px 20px;
     padding: 20px;
     margin: 0;
+    min-height: 280px; /* Set minimum height for illustration area */
+    position: relative;
+    margin-top: -20px; /* Pull illustration up into the container */
   }
 
   .desktop-illustration {
@@ -225,12 +230,16 @@ input.error {
   }
 
   .content {
-    padding: 20px;
+    padding: 30px 20px;
     text-align: left;
+    z-index: 1; /* Ensure content is above illustration */
+    margin-top: -40px; /* Pull content up to overlap with illustration */
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px 20px 0 0; /* Round top corners of content */
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .success-section {
