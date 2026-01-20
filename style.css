@@ -41,7 +41,7 @@ body {
 
 .illustration {
   flex: 1;
-  background-color: hsl(234, 29%, 20%);
+  /* background-color: hsl(234, 29%, 20%); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,7 +202,7 @@ input.error {
   }
 
   .form-section {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 0;
   }
 
