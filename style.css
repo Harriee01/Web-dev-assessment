@@ -134,12 +134,12 @@ button:hover {
 }
 
 .success-section {
-  padding: 40px;
-  text-align: center;
-  min-height: 500px;
+  padding: 20px;
+  text-align: left;
+  min-height: 400px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .success-content img {
@@ -182,6 +182,7 @@ button:hover {
 
 .hidden {
   display: none;
+
 }
 
 .error-message {

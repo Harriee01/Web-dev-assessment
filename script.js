@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //Check if email format is valid
     if (!isValidEmail(email)) {
-      showError('Please enter a valid email address');
+      showError('Valid email required');
       return;
     }
 
