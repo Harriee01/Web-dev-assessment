@@ -12,48 +12,46 @@
 </head>
 <body>
 
-  <main class="container">
-    <!-- Section 1: Sign-up form section-->
-    <section class="form-section">
-      <div class="content">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul> <!-- Benefits list with checkmark icons -->
-          <li><img src="./assets/images/icon-list.svg" alt=""> Product discovery and building what matters</li>
-          <li><img src="./assets/images/icon-list.svg" alt=""> Measuring to ensure updates are a success</li>
-          <li><img src="./assets/images/icon-list.svg" alt=""> And much more!</li>
-        </ul>
-         
-        <!-- Newsletter subscription form -->
-        <form id="newsletter-form">
-          <div class="form-group"><!-- Form group for email input with validation -->
-            <label for="email">Email address</label> <!-- Email label for accessibility -->
-            <input type="email" id="email" placeholder="email@company.com">
-             <!-- Error message container  -->
-            <span class="error-message" id="error-message"></span>
-          </div>
-           <!-- Submit button to send the form -->
-          <button type="submit">Subscribe to monthly newsletter</button>
-        </form>
-      </div>
-              <!-- Right column: Illustration (different images for desktop and mobile) -->
-        <div class="illustration">
-        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Sign up illustration" class="desktop-illustration">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign up illustration" class="mobile-illustration">
-      </div>
-    </section>
-       <!-- Section 2: Success Message Section -->
-    <!-- This section replaces the form section after successful submission -->
-    <section class="success-section hidden">
-      <div class="success-content">
-        <img src="./assets/images/icon-success.svg" alt="Success icon">
-        <h1>Thanks for <br> subscribing!</h1>
-        <p>A confirmation email has been sent to <br> <span id="user-email"></span>. Please open it and click <br> the button inside to confirm your subscription.</p><!-- The span with id="user-email" will be populated with the user's email via JavaScript -->
-        <button id="dismiss">Dismiss message</button> <!-- Button to dismiss the success message and return to form -->
-      </div>
-    </section>
+  <!-- Section 1: Sign-up form section-->
+  <section class="form-section container">
+    <div class="content">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul> <!-- Benefits list with checkmark icons -->
+        <li><img src="./assets/images/icon-list.svg" alt=""> Product discovery and building what matters</li>
+        <li><img src="./assets/images/icon-list.svg" alt=""> Measuring to ensure updates are a success</li>
+        <li><img src="./assets/images/icon-list.svg" alt=""> And much more!</li>
+      </ul>
+       
+      <!-- Newsletter subscription form -->
+      <form id="newsletter-form">
+        <div class="form-group"><!-- Form group for email input with validation -->
+          <div class=" label-row">
+               <label for="email">Email address</label>
+               <span class="error-message" id="error-message">Valid Email Required</span>  <!-- Error message container  -->
 
-    
+          </div>
+          <input type="email" id="email" placeholder="email@company.com">
+        </div>
+         <!-- Submit button to send the form -->
+        <button type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+            <!-- Right column: Illustration (different images for desktop and mobile) -->
+      <div class="illustration">
+      <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Sign up illustration" class="desktop-illustration">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign up illustration" class="mobile-illustration">
+    </div>
+  </section>
+     <!-- Section 2: Success Message Section -->
+  <!-- This section replaces the form section after successful submission -->
+  <section class="success-section hidden">
+    <div class="success-content">
+      <img src="./assets/images/icon-success.svg" alt="Success icon">
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span id="user-email"></span>. Please open it and click the button inside to confirm your subscription.</p><!-- The span with id="user-email" will be populated with the user's email via JavaScript -->
+      <button id="dismiss">Dismiss message</button> <!-- Button to dismiss the success message and return to form -->
+    </div>
   </section>
   
   <script src="script.js"></script>

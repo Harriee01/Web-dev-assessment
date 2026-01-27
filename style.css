@@ -19,13 +19,19 @@ body {
 }
 
 .container {
-  background-color: hsl(0, 0%, 100%);
+  /* background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
   overflow: hidden;
   max-width: 900px;
   width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding:20px;
+  padding:20px; */
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  max-width: 900px;
+  width: 100%;
 }
 
 .form-section {
@@ -93,6 +99,7 @@ li img {
 
 .form-group {
   margin-bottom: 20px;
+  position: relative;/* For positioning error message */
 }
 
 label {
@@ -134,13 +141,27 @@ button:hover {
 }
 
 .success-section {
-  padding: 20px;
+  padding:  40px;
   text-align: left;
   min-height: 400px;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+  /* align-items: flex-start; */
+  /* justify-content: center; */
+  max-width: 500px; 
+  /* Limit width */
+  margin: 0 auto; 
+  /* Center the section */
 }
+
+.success-content {
+
+  width: 100%;
+  background-color: #fff;
+  border-radius: 32px;
+  padding: 60px;
+  max-width: 500px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+} 
 
 .success-content img {
   margin-bottom: 20px;
@@ -185,18 +206,35 @@ button:hover {
 
 }
 
+.label-row {
+  
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
 .error-message {
   color: hsl(4, 100%, 67%);
-  font-size: 0.9rem;
-  margin-top: 5px;
-  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: none;
+  white-space: nowrap;
+
+}
+
+.error-message.active {
+  display: inline-block;
+  opacity: 1;
 }
 
 input.error {
   border-color: hsl(4, 100%, 67%);
+  background-color: rgba(255, 98, 87, 0.15);
+  color: hsl(4, 100%, 67%);
 }
 
-.attribution {
+/* .attribution {
   margin-top: 20px;
   font-size: 11px;
   text-align: center;
@@ -205,13 +243,20 @@ input.error {
 
 .attribution a {
   color: hsl(0, 0%, 100%);
-}
+} */
 
 /* Mobile styles */
 @media (max-width: 768px) {
+
+     body {
+    background-color: hsl(0, 0%, 100%); /* White background for mobile */
+    padding: 0; /* Remove padding */
+  }
+
   .container{
     padding: 0;
-    border-radius: 20px;
+    border-radius:0;
+    box-shadow: none;
   }
 
   .form-section {
@@ -229,8 +274,8 @@ input.error {
     margin: 0;
     min-height: 280px; /* Set minimum height for illustration area */
     position: relative;
-    margin-top: -20px; /* Pull illustration up into the container */
-  }
+    /* margin-top: -20px; Pull illustration up into the container*/
+  } 
 
   .desktop-illustration {
     display: none;
@@ -240,14 +285,17 @@ input.error {
     display: block;
     width: 100%;
     max-width: 300px;
+    height: auto;
+    object-fit: cover;
   }
 
   .content {
-    padding: 30px 20px;
+    padding: 80px 24px;
     text-align: left;
+    position: relative;
     z-index: 1; /* Ensure content is above illustration */
-    margin-top: -40px; /* Pull content up to overlap with illustration */
-    background-color: hsl(0, 0%, 100%);
+    
+    /* background-color: hsl(0, 0%, 100%); */
     border-radius: 20px 20px 0 0; /* Round top corners of content */
   }
 
@@ -256,6 +304,14 @@ input.error {
   }
 
   .success-section {
-    padding: 20px;
+    padding: 60px 24px 40px 24px;
+    min-height: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .success-section h1 {
+    font-size: 2.5rem;
   }
 }

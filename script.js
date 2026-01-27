@@ -52,11 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
   //Helper functions
   function showError(message) {
     errorMessage.textContent = message;  // Display the error message text
+    errorMessage.classList.add('active');  // Show the error message
     emailInput.classList.add('error');
   }
 
   function clearError() {
     errorMessage.textContent = ''; // Clear the error message text
+    errorMessage.classList.remove('active');  // Hide the error message
     emailInput.classList.remove('error');// Remove 'error' CSS class from input field
   }
 
