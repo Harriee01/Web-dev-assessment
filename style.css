@@ -275,6 +275,7 @@ input.error {
     min-height: 280px; /* Set minimum height for illustration area */
     position: relative;
     /* margin-top: -20px; Pull illustration up into the container*/
+    
   } 
 
   .desktop-illustration {
@@ -282,11 +283,17 @@ input.error {
   }
 
   .mobile-illustration {
-    display: block;
+    /* display: block;
     width: 100%;
     max-width: 300px;
     height: auto;
+    object-fit: cover; */
+    display: block;
+    width: 100%;
+    max-height: 300px;
     object-fit: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 
   .content {
